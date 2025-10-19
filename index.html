@@ -597,18 +597,21 @@
             resize: vertical;
         }
 
-        /* ========== FOOTER ========== */
+        /* ========== FIXED FOOTER STYLES ========== */
         .footer {
-            background: rgba(2, 0, 36, 0.9);
-            padding: 50px 0 20px;
-            text-align: center;
+            background: linear-gradient(135deg, #0d0d3a, #020024) !important;
+            border-top: 3px solid #FFD700 !important;
+            position: relative !important;
+            z-index: 100 !important;
+            padding: 50px 0 0 0 !important;
+            margin-top: 0 !important;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+            gap: 40px !important;
+            margin-bottom: 40px !important;
         }
 
         .footer-logo {
@@ -622,6 +625,11 @@
         .footer-about {
             max-width: 300px;
             margin: 0 auto;
+        }
+
+        .footer-about p {
+            color: #ffffff !important;
+            opacity: 0.9 !important;
         }
 
         .footer-links h3,
@@ -640,14 +648,19 @@
         }
 
         .footer-links a {
-            color: var(--color-white-transparent);
+            color: #ffffff !important;
             text-decoration: none;
             transition: var(--transition-smooth);
         }
 
         .footer-links a:hover {
-            color: var(--color-gold);
+            color: var(--color-gold) !important;
             padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: #ffffff !important;
+            margin-bottom: 10px;
         }
 
         .social-links {
@@ -677,10 +690,21 @@
         }
 
         .copyright {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--color-white-transparent);
-            font-size: 0.9rem;
+            background: rgba(2, 0, 36, 0.95) !important;
+            padding: 25px !important;
+            margin-top: 30px !important;
+            border-top: 2px solid #FFD700 !important;
+            border-radius: 10px 10px 0 0 !important;
+        }
+
+        .copyright p {
+            color: #FFD700 !important;
+            font-size: 1.2rem !important;
+            font-weight: 700 !important;
+            text-align: center !important;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.8) !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
         }
 
         /* ========== RESPONSIVE DESIGN ========== */
@@ -1164,6 +1188,19 @@
             border: 1px solid #ff6b6b;
             display: block;
         }
+
+        /* Heartbeat animation */
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+                color: #ff6b6b;
+            }
+            50% {
+                transform: scale(1.3);
+                color: #ff4757;
+                text-shadow: 0 0 10px #ff4757;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1229,7 +1266,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://www.shutterstock.com/image-photo/happy-young-indian-woman-placing-600nw-2376211695.jpg" alt="Diwali Celebration with diyas" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1633918723013-cc4cc17449c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Diwali Celebration with diyas" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1292,37 +1329,37 @@
             <h2 class="section-title">Diwali Gallery</h2>
             <div class="gallery-container">
                 <div class="gallery-item fade-in">
-                    <img src="https://dy3rma73kowlp.cloudfront.net/uploads/2025/10/Small-3.jpg" alt="Colorful Rangoli design" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1572383672419-ab35444a6934?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Colorful Rangoli design" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Colorful Rangoli</h3>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="https://m.media-amazon.com/images/I/61wAyNU8oZL._AC_UF894,1000_QL80_.jpg" alt="Diwali diyas and candles" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1603468620909-93e809f6c5d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Diwali diyas and candles" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Festive Diyas</h3>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="https://media.istockphoto.com/id/95746776/photo/fireworks-with-copy-space.jpg?s=612x612&w=0&k=20&c=5BTLK1NBM9KkTKUwUYHvJ7uO7R0jOI0UonFjFkSdjiY=" alt="Diwali fireworks display" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1542370285-b8eb8317691c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Diwali fireworks display" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Sky Fireworks</h3>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="https://ribbonstopastas.com/wp-content/uploads/2021/09/Diwali-Sweets-and-Snacks-Platter-9.jpg" alt="Traditional Diwali sweets" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1570570623585-87e5d57fb1db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Traditional Diwali sweets" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Traditional Sweets</h3>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="https://media.istockphoto.com/id/487408618/photo/indian-family-celebrating-diwali-fesitval-of-lights.jpg?s=612x612&w=0&k=20&c=cpG2bszn2AeFINeNjq1G3rQ0P5x3OeZpsjeM-cC3Gt0=" alt="Family celebrating Diwali" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1602777924014-0aa1e9a5b6e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Family celebrating Diwali" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Family Gathering</h3>
                     </div>
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="https://media.nationthailand.com/uploads/images/md/2023/12/t2ulDntdjhy82ZL0U22M.webp" alt="Beautifully lit temple during Diwali" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1632146867948-89b1019767a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Beautifully lit temple during Diwali" loading="lazy">
                     <div class="gallery-overlay">
                         <h3>Illuminated Temple</h3>
                     </div>
@@ -1397,7 +1434,7 @@
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p>demo@iitg.ac.in</p>
+                            <p>cohort3@iitg.ac.in</p>
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -1406,7 +1443,7 @@
                         </div>
                         <div>
                             <h3>Phone</h3>
-                            <p>+91 9178757976</p>
+                            <p>+91 123 456 7890</p>
                         </div>
                     </div>
                     <div class="contact-item fade-in">
@@ -1455,7 +1492,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Fixed Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1483,18 +1520,20 @@
                 <div class="footer-contact">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i> IIT Guwahati, Assam, India</p>
-                    <p><i class="fas fa-envelope"></i> demo@iitg.ac.in</p>
-                    <p><i class="fas fa-phone"></i> +91 9178757976</p>
+                    <p><i class="fas fa-envelope"></i> cohort3@iitg.ac.in</p>
+                    <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
                     <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/9178757976" class="whatsapp-link" target="_blank">+91 78757 7976</a></p>
                 </div>
             </div>
             <div class="copyright">
-    <p style="color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); font-size: 1.1rem;">
-        &copy; 2025 Diwali Celebration - Cohort 3, IIT Guwahati. 
-        <br>
-        Created with <i class="fas fa-heart" style="color: #ff6b6b; animation: heartbeat 1.5s infinite;"></i> by Swadhin
-    </p>
-</div>
+                <p>
+                    &copy; 2023 Diwali Celebration - Cohort 3, IIT Guwahati
+                    <br>
+                    <span style="font-size: 1.1rem; display: inline-block; margin-top: 8px;">
+                        Created with <i class="fas fa-heart" style="color: #ff6b6b; animation: heartbeat 1.5s ease-in-out infinite;"></i> by Swadhin
+                    </span>
+                </p>
+            </div>
         </div>
     </footer>
 
@@ -1517,7 +1556,7 @@
     <script>
         // Initialize EmailJS with your public key
         (function() {
-            emailjs.init("J23_2iR_SNLBtSTuW"); // Replace with your actual EmailJS public key
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
         })();
 
         // Wait for DOM to be fully loaded
@@ -1810,102 +1849,78 @@
         }
 
         // ========== CONTACT FORM ==========
-function initContactForm() {
-    const form = document.getElementById('wishForm');
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const rollNumber = document.getElementById('rollNumber').value;
-        const message = document.getElementById('message').value;
-        const formStatus = document.getElementById('formStatus');
-        
-        // Simple form validation
-        const inputs = form.querySelectorAll('input[required], textarea[required]');
-        let isValid = true;
-        
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                isValid = false;
-                input.style.borderColor = '#ff6b6b';
-            } else {
-                input.style.borderColor = '';
-            }
-        });
-        
-        if (isValid) {
-            // Show loading state
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
+        function initContactForm() {
+            const form = document.getElementById('wishForm');
+            if (!form) return;
             
-            console.log('Attempting to send email...');
-            console.log('Name:', name);
-            console.log('Email:', email);
-            
-            // Send email using EmailJS
-            const serviceID = 'service_qug8pmr'; // Try this first
-            const templateID = 'template_ctng4sj';
-            
-            console.log('Using Service ID:', serviceID);
-            console.log('Using Template ID:', templateID);
-            
-            emailjs.send(serviceID, templateID, {
-                from_name: name,
-                from_email: email,
-                roll_number: rollNumber || 'Not provided',
-                message: message
-            })
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                formStatus.textContent = 'Thank you for your Diwali wishes! Your message has been sent successfully.';
-                formStatus.className = 'form-status success';
-                form.reset();
-                createCelebrationEffect();
-            })
-            .catch((error) => {
-                console.error('FAILED...', error);
-                console.log('Error details:', {
-                    serviceID: service_qug8pmr,
-                    templateID: template_ctng4sj,
-                    errorText: error.text,
-                    status: error.status
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const rollNumber = document.getElementById('rollNumber').value;
+                const message = document.getElementById('message').value;
+                const formStatus = document.getElementById('formStatus');
+                
+                // Simple form validation
+                const inputs = form.querySelectorAll('input[required], textarea[required]');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.style.borderColor = '#ff6b6b';
+                    } else {
+                        input.style.borderColor = '';
+                    }
                 });
                 
-                // More specific error messages
-                if (error.text.includes('public key')) {
-                    formStatus.textContent = 'Email configuration error. Please check public key.';
-                } else if (error.text.includes('service')) {
-                    formStatus.textContent = 'Email service not found. Please check service ID.';
-                } else if (error.text.includes('template')) {
-                    formStatus.textContent = 'Email template not found. Please check template ID.';
+                if (isValid) {
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Send email using EmailJS
+                    const serviceID = 'default_service'; // or your actual service ID
+                    const templateID = 'template_ctng4sj';
+                    
+                    emailjs.send(serviceID, templateID, {
+                        from_name: name,
+                        from_email: email,
+                        roll_number: rollNumber || 'Not provided',
+                        message: message
+                    })
+                    .then(() => {
+                        formStatus.textContent = 'Thank you for your Diwali wishes! Your message has been sent successfully.';
+                        formStatus.className = 'form-status success';
+                        form.reset();
+                        createCelebrationEffect();
+                    })
+                    .catch((error) => {
+                        console.error('EmailJS error:', error);
+                        formStatus.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                        formStatus.className = 'form-status error';
+                    })
+                    .finally(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        setTimeout(() => {
+                            formStatus.className = 'form-status';
+                        }, 5000);
+                    });
+                    
                 } else {
-                    formStatus.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                    formStatus.textContent = 'Please fill in all required fields before submitting.';
+                    formStatus.className = 'form-status error';
+                    setTimeout(() => {
+                        formStatus.className = 'form-status';
+                    }, 3000);
                 }
-                formStatus.className = 'form-status error';
-            })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                setTimeout(() => {
-                    formStatus.className = 'form-status';
-                }, 5000);
             });
-            
-        } else {
-            formStatus.textContent = 'Please fill in all required fields before submitting.';
-            formStatus.className = 'form-status error';
-            setTimeout(() => {
-                formStatus.className = 'form-status';
-            }, 3000);
         }
-    });
-}
 
         // ========== BACK TO TOP ==========
         function initBackToTop() {
@@ -2081,32 +2096,30 @@ function initContactForm() {
         }
 
         // Add keyboard navigation
-document.addEventListener('keydown', (e) => {
-    // Check if user is typing in any form field
-    const activeElement = document.activeElement;
-    const isTyping = activeElement.tagName === 'INPUT' || 
-                     activeElement.tagName === 'TEXTAREA' || 
-                     activeElement.isContentEditable;
-    
-    // Spacebar to trigger celebration (only when not typing in form fields)
-    if (e.code === 'Space' && !isTyping) {
-        e.preventDefault();
-        if (window.createCelebrationEffect) {
-            createCelebrationEffect();
-        }
-    }
-    
-    // Escape to close modal (works everywhere)
-    if (e.code === 'Escape') {
-        const modal = document.getElementById('galleryModal');
-        if (modal && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    }
-});
+        document.addEventListener('keydown', (e) => {
+            // Check if user is typing in any form field
+            const activeElement = document.activeElement;
+            const isTyping = activeElement.tagName === 'INPUT' || 
+                             activeElement.tagName === 'TEXTAREA' || 
+                             activeElement.isContentEditable;
+            
+            // Spacebar to trigger celebration (only when not typing in form fields)
+            if (e.code === 'Space' && !isTyping) {
+                e.preventDefault();
+                if (window.createCelebrationEffect) {
+                    createCelebrationEffect();
+                }
+            }
+            
+            // Escape to close modal (works everywhere)
+            if (e.code === 'Escape') {
+                const modal = document.getElementById('galleryModal');
+                if (modal && modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
     </script>
 </body>
 </html>
-
-
